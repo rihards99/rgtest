@@ -1,0 +1,24 @@
+{
+  "name": "rgtest",
+  "version": "1.0.0",
+  "description": "Code Challenge for Resource Guru",
+  "main": "index.js",
+  "scripts": {
+    "flatten": "node src/flatten.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rihards99/rgtest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rihards99/rgtest/issues"
+  },
+  "homepage": "https://github.com/rihards99/rgtest#readme",
+  "dependencies": {
+    "command-line-args": "^5.2.1",
+    "jest": "^28.1.1"
+  }
+}
