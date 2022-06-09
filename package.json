@@ -4,8 +4,8 @@
   "description": "Code Challenge for Resource Guru",
   "main": "index.js",
   "scripts": {
-    "flatten": "node src/flatten.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "flatten": "node src/flatten-cli.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

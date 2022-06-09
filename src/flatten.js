@@ -1,9 +1,21 @@
-const cla = require('command-line-args')
+const flatten = (options) => {
 
-const optionDefinitions = [
-  { name: 'array', alias: 'a', type: Array },
-];
+  const flat = (accumulator, element) => {
+    if (Array.isArray(element)) {
+      return accumulator.concat(element.reduce((acc, e) => flat(acc, e), []))
+    } else {
+      accumulator.push(element)
+      return accumulator
+    }
+  }
 
-const options = cla(optionDefinitions);
+  const json = JSON.parse(options.json)
+  if (!Array.isArray(json)) {
+    throw new Error("JSON input provided is not an array")
+  }
+  return json.reduce((acc, e) => flat(acc, e), [])
+}
 
-console.log(options); // TODO: The actual script
+module.exports = flatten
+
+
